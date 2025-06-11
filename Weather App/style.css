@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: url('images/pexels-rrodriguesim-15725040.jpg');
+    background-size: cover;
+    overflow-x: hidden;
+}
+.card {
+    width: 90%;
+    max-width: 470px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease .4s forwards;
+}
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transform: scale(0);
+    animation: popIn .6s ease .8s forwards;
+}
+.search button img {
+    width: 16px;
+}
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes popIn {
+    to {
+        transform: scale(1);
+    }
+}
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeUp 1s ease 1s forwards;
+}
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.2s forwards;
+}
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.4s forwards;
+}
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.6s forwards;
+}
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    overflow: hidden;
+}
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+.weather {
+    display: none;
+}
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
